@@ -1,0 +1,30 @@
+.bg-dark {
+    background-color: #434343;
+    
+}
+
+.nav-link {
+    color: #F8F8F8;
+    font-family: "sandbrush";
+    font-size: 50px;
+    margin: 0 10px;
+    
+}
+.nav-link:hover{
+    color: #adadad;
+}
+
+
+
+.navbar-brand {
+    color:#F7C873;
+    font-family: "sandbrush";
+    font-size: 80px;
+    padding: 0;
+    margin:0 20px;
+}
+
+.navbar {
+    padding: 0;
+    
+}

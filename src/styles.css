@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+@font-face {
+    font-family: "sandbrush";
+    src: url(assets/font/sandbrush.ttf);
+}
+
+
+table, td, tr, th {
+    border: 6px solid #434343;
+    text-align: center;
+    padding: 10px;
+    font-family: "quicksand";
+    font-size: 18px;
+    background-color:#F8F8F8;
+    color: #434343;
+}
+
+table {
+    margin: 60px auto;
+    width: 750px;
+}
+
+thead tr th {
+    font-size: 20px;
+    background-color: #434343;
+    color: #F8F8F8;
+}
+
+caption {
+    border: 6px solid #434343;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 20px;
+    font-family: "quicksand";
+    font-size: 20px;
+    background-color:#F8F8F8;
+    color: #434343;
+    width: 90%;
+    margin: 60px auto;
+}
+
+body{
+    background-color: #FAEBCD;
+}
+
+h1 {
+    font-family: "sandbrush";
+    font-size: 180px;
+    color: #434343;
+    text-align: center;
+}
+
+h4 {
+    font-family: "Noto Sans Egyptian Hieroglyphs";
+}

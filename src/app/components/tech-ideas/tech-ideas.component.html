@@ -1,0 +1,82 @@
+
+<h1>Tech Ideas</h1>
+
+<img src="./assets/img/ancient-egyptian-mummy-sketch-vector-28850756.jpeg" alt="hieroglyphics">
+
+
+<form [formGroup]="techForm" (ngSubmit)="onSubmit()">
+    <h2>Got an Idea?</h2>
+    <div class="form-group">
+        <label for="userName">Username: </label>
+        <input type="text" class="form-control" placeholder="Enter your Username..." formControlName="userName" id="userName">
+        <div class="field-alert">
+            <span class="alert alert-danger" *ngIf="userNameFormControl.touched && userNameFormControl.errors?.['required']">
+                A Username is required.
+            </span>
+            <span class="alert alert-danger" *ngIf="userNameFormControl.errors?.['minlength']">
+                Username needs to be more than 2 characters.
+            </span>
+            <span class="alert alert-danger" *ngIf="userNameFormControl.errors?.['prohibited']">
+                "Tourist" as a Username is prohibited.
+            </span>
+        </div>
+
+    </div>
+<hr>
+    <div class="form-group">
+        <label for="email">Email: </label>
+        <input type="email" class="form-control" placeholder="Enter your Email..." formControlName="email"
+            id="email">
+
+        <span class="alert alert-danger"
+            *ngIf="emailFormControl.touched && emailFormControl.errors?.['required']">
+            An Email is required.
+        </span>
+        <span class="alert alert-danger"
+        *ngIf="emailFormControl.errors?.['pattern']">Email must be a valid email address</span>
+
+    </div>
+    <hr>
+    <div class="form-group">
+        <label for="age">Age: </label>
+        <input type="number" class="form-control" formControlName="age" id="age">
+
+        <span class="alert alert-danger" *ngIf="ageFormControl.touched && ageFormControl.errors?.['required']">
+            Your Age is required.
+        </span>
+
+    </div>
+<hr>
+    <div class="form-group">
+        <label for="city">Target City: </label>
+        <select class="form-select" formControlName="city" >
+            <option value="" selected disabled>Select a City...</option>
+            <option value="{{ cities }}" *ngFor="let city of cities">{{city}}</option>
+        </select>
+
+        <span class="alert alert-danger" *ngIf="cityFormControl.touched && cityFormControl.errors?.['required']">
+            A City must be selected.
+        </span>
+    </div>
+<hr>
+<div class="form-group">
+    <label for="brief">Brief about your technical idea: </label>
+    <textarea rows="4" cols="50" class="form-control" formControlName="brief" id="brief" placeholder="Enter tech idea here..."></textarea>
+
+    <span class="alert alert-danger" *ngIf="briefFormControl.touched && briefFormControl.errors?.['required']">
+        Your tech idea is required.
+    </span>
+    <span class="alert alert-danger" *ngIf="briefFormControl.errors?.['minlength']">
+        Username needs to be more than 100 characters.
+    </span>
+    <span class="alert alert-danger" *ngIf="briefFormControl.errors?.['prohibited']">
+        The word "nothing" is prohibited
+    </span>
+
+</div>
+
+
+    <button type="submit" class="btn btn-lg" [disabled]="techForm.invalid">Submit Idea!</button>
+
+
+</form>

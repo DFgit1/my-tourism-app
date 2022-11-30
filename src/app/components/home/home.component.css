@@ -1,0 +1,26 @@
+img {
+    display: block;
+    margin: 60px auto;
+    border-radius: 20px;
+    width: 800px;
+}
+
+.content {
+    width: 800px;
+    border: 4px solid #434343;
+    border-radius: 2px 50px;
+    padding: 20px;
+    text-align: center;
+    font-family: "quicksand";
+    font-size: 20px;
+    margin: 40px auto;
+    background-color: #f7c97355;
+}
+
+.hiero {
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    mix-blend-mode: multiply;
+
+}

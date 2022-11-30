@@ -1,0 +1,13 @@
+<h1>Cities</h1>
+<img src="./assets/img/ancient-egyptian-mummy-sketch-vector-28850756.jpeg" alt="hieroglyphics">
+<div class="citypage">
+
+    <ul *ngFor="let cityInfo of cities">
+        <h3 [ngClass]="{'black': cityInfo.attractionSites.length < 3, 'green': cityInfo.attractionSites.length > 2}">
+            {{cityInfo.name}}
+        </h3>
+        <li>{{cityInfo.attractionSites}}</li>
+
+
+    </ul>
+</div>

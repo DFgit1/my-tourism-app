@@ -1,0 +1,11 @@
+<h1>Weather</h1>
+
+<img src="./assets/img/ancient-egyptian-mummy-sketch-vector-28850756.jpeg" alt="hieroglyphics">
+
+<div class="weatherpage">
+    <ul>
+        <li *ngFor="let weather of weatherData">
+            <a [routerLink]="['/weather', weather.name, weather.springN, weather.springM, weather.summerN, weather.summerM, weather.winterN, weather.winterM, weather.autumnN, weather.autumnM, weather.visitFrom, weather.visitTo]">{{weather.name}}</a>
+        </li>
+    </ul>
+    </div>
